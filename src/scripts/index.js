@@ -1,3 +1,8 @@
+//twitch secret : v2pvggqfhu15jm3qkaophj4ltuev14
+
+//client id : pmp23xi405ww8lrij1qmtohkra428g
+
+
 import { createStore, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
@@ -43,10 +48,14 @@ const store = createStore(exampleReducer,
 
 store.dispatch((dispatch) => {
     dispatch({ type: 'FETCH_USERS_START' })
-    fetch('https://jsonplaceholder.typicode.com/posts/1')
+    fetch('https://api.twitch.tv/helix/streams?game_id=505845', {
+        headers: {
+            'Client-ID': 'pmp23xi405ww8lrij1qmtohkra428g'
+        }
+    })
         .then(response => response.json())
         .then((json) => {
-            dispatch({ type: 'RECEIVE_USERS', payload: json })
+            dispatch({ type: 'RECEIVE_USERS', payload: json.data })
         })
         .catch((err) => {
             dispatch({ type: 'FETCH_USERS_ERROR', payload: err })
