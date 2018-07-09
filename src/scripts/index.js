@@ -1,11 +1,9 @@
 //twitch secret : v2pvggqfhu15jm3qkaophj4ltuev14
-
 //client id : pmp23xi405ww8lrij1qmtohkra428g
-
-
 import { createStore, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
+import '../firebase/firebase'
 
 const defaultStore = {
     fetching: false,
