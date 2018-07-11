@@ -1,3 +1,9 @@
+.is-active{
+    font-weight: bold;
+}
 
-
+a{
+    color: blue;
+    text-decoration: none;
+}
 

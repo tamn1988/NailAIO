@@ -7,6 +7,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'docs'),
   },
+  devServer: {
+    historyApiFallback: true
+  },
   module: {
     rules: [
       {
