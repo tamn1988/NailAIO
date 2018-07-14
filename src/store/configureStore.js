@@ -6,5 +6,6 @@ export default () => {
     const store = createStore(testReducer, applyMiddleware(
         ReduxThunk
     ))
+    return store
 };
 
