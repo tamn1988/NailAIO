@@ -1,6 +1,7 @@
 import React from 'react';
 import AddEmployee from '../containers/EmployeeForm';
 import { employeeFormHOC } from '../containers/EmployeeForm';
+import AddServiceFrom from '../containers/AddServiceForm'
 import EmployeesList from '../containers/EmployeesList';
 
 
@@ -17,6 +18,7 @@ const Manage = () => {
             <h1>Manage</h1>
             <EmployeeForm />
             <EmployeesList />
+            <AddServiceFrom />
         </div>
     )
 }

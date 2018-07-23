@@ -66,10 +66,10 @@ class EmployeeForm extends React.Component {
         return (
             <div>
                 <form onSubmit={this.onSubmit}>
-                    <input type="text" placeholder="Employee Name" value={this.state.name} onChange={this.onNameChange} />
-                    <input type="number" placeholder="Pay" value={this.state.pay} onChange={this.onPayChange} />
-                    <input type="text" placeholder="Position" value={this.state.position} onChange={this.onPositionChange} />
-                    <select value={this.state.isEmployed} onChange={this.onIsEmployedChange}>
+                    <input type="text" placeholder="Employee Name" value={this.state.name} onChange={this.onNameChange}  required/>
+                    <input type="number" placeholder="Pay" value={this.state.pay} onChange={this.onPayChange} required />
+                    <input type="text" placeholder="Position" value={this.state.position} onChange={this.onPositionChange} required />
+                    <select value={this.state.isEmployed} onChange={this.onIsEmployedChange} required>
                         <option value={true}>Yes</option>
                         <option value={false}>No</option>
                     </select>

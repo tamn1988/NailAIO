@@ -3,9 +3,9 @@ const defaultState = {
 
 export default (state = defaultState, action) => {
     switch (action.type) {
-        case 'FETCH':
+        case 'FETCH_EMPLOYEE':
             return {
-                employees: action.payload
+                ...action.payload
             }
         default:
             return state;

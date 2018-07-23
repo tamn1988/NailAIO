@@ -12,7 +12,7 @@ export const addEmployee = (employee) => {
 
 //SET_EMPLOYEE
 export const setEmployee = (payload) => ({
-    type: 'FETCH',
+    type: 'FETCH_EMPLOYEE',
     payload
 })
 
